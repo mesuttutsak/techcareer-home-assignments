@@ -77,7 +77,7 @@ function quest8() {
 
   return str;
 }
-
+console.log('odevStringFunctions')
 console.log("1)", quest1());
 console.log("2)", quest2());
 console.log("3)", quest3());
@@ -86,3 +86,4 @@ console.log("5)", quest5());
 console.log("6)", quest6());
 console.log("7)", quest7());
 console.log("8)", quest8());
+console.log('------------------------------------------------------------------------------')
