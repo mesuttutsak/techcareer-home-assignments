@@ -41,7 +41,7 @@ function quest4() {
   };
 }
 
-console.log("odevLoops");
+console.log("Assignment: odevLoops");
 console.log("1)", quest1());
 console.log("2)", quest2());
 console.log("3)", quest3());

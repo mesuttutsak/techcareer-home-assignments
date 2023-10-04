@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      section {
+        background-color: green;
+        height: autos;
+        width: 70%;
+        min-width: 600px;
+      }
+
+      #arena {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border: 1px solid;
+        height: 600px;
+      }
+
+      #raceLyt {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+
+        gap: 20px;
+
+        height: 100%;
+        width: 100%;
+      }
+
+      .horse {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        overflow: hidden;
+        background: white;
+
+        height: 100px;
+        width: 130px;
+
+        transition: 0.0001 all;
+      }
+
+      .horse img {
+        height: 100%;
+        width: auto;
+      }
+
+      #finishLine {
+        position: relative;
+        height: 600px;
+        min-width: 1px;
+        margin-right: 30px;
+        background: black;
+
+        &::after {
+            content: "finishLine";
+            transform-origin: left bottom;
+            transform: rotate(90deg);
+            position: absolute;
+            font-weight: 700;
+            top: 0;
+            left: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section>
+        <div>
+          <button onclick="startEvent()" id="startBtn">Start</button>
+          <button onclick="resetEvent()" id="resetBtn">Reset</button>
+        </div>
+        <div id="arena">
+          <div id="raceLyt">
+            <span class="horse">
+              <img
+                src="https://res.cloudinary.com/dk-find-out/image/upload/q_80,w_1920,f_auto/MA_00600259_vpf1m0.jpg"
+                width="100px"
+                alt="horse 1"
+              />
+            </span>
+            <span class="horse">
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRD2kfJ4vu9ZY75oviCgFLr-m9e44OQY8XArrtl9J2ElEw0UR3Huq8e8o1C67YQibpWstc&usqp=CAU"
+                width="100px"
+                alt="horse 2"
+              />
+            </span>
+            <span class="horse">
+              <img
+                src="https://fishsubsidy.org/wp-content/uploads/2020/02/draft-horse-brabant-3d-model_Z-2.jpg"
+                width="100px"
+                alt="horse 3"
+              />
+            </span>
+          </div>
+          <div id="finishLine"></div>
+        </div>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
